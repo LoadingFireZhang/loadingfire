@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+<h1>使用原生DOM进行元素操作</h1>
+<button id="bt1">0</button>
+<script>
+  var b1 = document.querySelector('#bt1');
+  //console.log(b1);
+  b1.onclick = function(){
+    var num = this.innerHTML;
+    num++;
+    this.innerHTML = num;
+  }
+</script>
+
+
+<h1>使用jQuery进行元素操作</h1>
+<button id="bt2">0</button>
+
+<script src="js/jquery-1.11.3.js"></script>
+<script>
+  $('#bt2').on('click', function(){
+    var num = $(this).html(); //读取innerHTML
+    num++;
+    $(this).html(num);  //设置innerHTML
+  })
+</script>
+</body>
+</html>
