@@ -1,1 +1,1 @@
-git new develop branch
+git new develop branch -v1.0
